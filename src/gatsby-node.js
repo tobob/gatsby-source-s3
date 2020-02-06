@@ -34,7 +34,7 @@ export async function sourceNodes(
           const node = {
             ...rest,
             ...content,
-            Url: `https://s3.${region ? `${region}.` : ''}amazonaws.com/${rest.Name}/${Key}`,
+            Url: `https://${rest.Name}.s3.${region ? `${region}.` : ''}amazonaws.com/${Key}`,
             id: `s3-${Key}`,
             children: [],
             parent: '__SOURCE__',
